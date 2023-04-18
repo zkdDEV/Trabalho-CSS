@@ -1,0 +1,186 @@
+/*
+    A sintaxe para chamar o css dentro do html é:
+    ##################################################   
+        <style>
+
+            seletor
+            {
+                propriedade: valor;
+            }
+
+        </style>
+    ##################################################
+    Aqui dentro do css não precisamos da tag <style>,
+    já vamos direto para o que está dentro dela, ou seja,
+    seletor, propriedade e valor
+*/
+
+h1{
+    color: rgb(255, 255, 255);
+}
+
+/*Utilizando o símbolo * é selecionado todos os textos e etc...*/
+*
+{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*Definindo uma cor especifica para um texto a partir de sua Class no html(Utilizamos o . antes do nome da Class )*/
+.date-news
+{
+    color: rgb(0, 0, 0);
+}
+
+/*Filho maior direto o body, ous seja só vai mudar o primeiro header*/
+body > header
+{
+    background-color: gray;
+    padding: 16px 0px;
+}
+
+/*Deixando tudo na horizontal*/
+header .container
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*Fazendo os links para outros sites ficatem em uma linha*/
+header li
+{
+    display: inline;
+}
+
+header li a
+{
+    color: white;
+    padding: 0px 8px;
+    text-decoration: none;
+}
+
+/*width é a largura e o valor colocado padrão dos Notebooks/PCS e etc. 
+Abaixo tem a margin(margem) do computador na parte de cima, direita, baixo e esquerda*/
+.container
+{
+    width: 1366px;
+    margin: 0 auto 0 auto;
+}
+
+/*display: flex deixa as coisas na horizontal.
+flex-wrap: wrap faz com que quando chega no máximo da linha ela quebra.
+justify-content: space-between serve para organizar as notícias*/
+.articles
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/*Arrummando a altura máxima que as imagens podem ter*/
+.articles article img
+{
+    /*height: 240px;*/
+    width: 100%;
+}
+
+/*Definindo quantas notícias devem aparecer por linha; de 100% é o total e eu quero 3 notícias por linha basta dividir 100/3*/
+.articles article
+{
+    width: 30%;
+}
+
+/*Espaçamento por sessão*/
+section
+{
+    padding: 16px 0px;
+}
+
+/*Aumentando margem inferio do título e dos artigos*/
+section h2, .articles article
+{
+    margin-bottom: 16px;
+}
+
+/*Aumentando a margem dos mini títulos */
+.articles article h3
+{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+/*Mudando a cor do fundo dos links*/
+.articles article a
+{
+    background-color: green;
+    color: white;
+    padding: 8px;
+    display: inline-block;
+    text-decoration: none;
+    /*font-weight: 500;*/
+    margin-top: 8px;
+}
+
+.articles article a:hover
+{
+    text-decoration: underline;
+}
+
+/*Escolhendo a fonte*/
+.articles article p,
+.articles article a
+{
+    font-family: 'Franklin Gothic Medium';
+}
+
+/*Mudando o tamanho do título da reportagem*/
+.articles article h3
+{
+    font-size: 24px;
+}
+
+/*Mudando o tamanho do título da sessão*/
+section h2
+{
+    font-size: 32px;
+}
+
+#sports
+{
+    background-color: rgba(0,255,0,0.1);
+}
+
+#economy
+{
+    background-color: rgb(249, 249, 0);
+}
+
+#economy .articles article a
+{
+    background-color: gray;
+}
+
+/*####################################-Minhas-Mudanças-##############################################*/
+
+#games
+{
+    background-color: rgb(244, 137, 137);
+}
+
+#films
+{
+    background-color: rgb(55, 113, 164);
+}
+
+#games .articles article a
+{
+    background-color: rgb(251, 0, 0);
+}
+
+#films .articles article a
+{
+    background-color: white;
+    color: black;
+}
